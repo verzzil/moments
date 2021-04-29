@@ -42,7 +42,7 @@ for i in range(0, 1000000):
     else:
         full_dict.update({current_value: 1})
 
-print(x_dict)
+# print(x_dict)
 
 print("0-th moment: ", len(full_dict))
 print("1-th moment: ", sum(full_dict.values()))
@@ -55,19 +55,23 @@ print("2-nd moment: ", sum(
     )
 ) / variables)
 
+# Исследуя данный алгоритм на практике понял, что на больших наборах данных
+#   он даёт далеко не точный результат
+
 # test = {
-#     "c": [3, 2],
-#     "a": [2]
+#     "7": [2, 1],
+#     "2": [1],
+#     "5": [2, 1]
 # }
-#
+
 # print(test.values())
 #
 # print(
 # sum(
 #     map(
 #         lambda arr: sum(
-#             map(lambda elem: 15 * (2 * elem - 1), arr)
+#             map(lambda elem: 7 * (2 * elem - 1), arr)
 #         ),
 #         test.values()
 #     )
-# ) / 3)
+# ) / 5)
